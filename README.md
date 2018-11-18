@@ -1,6 +1,6 @@
 # node-blockchain
 
-Decentralised transactional system with blockchains on node.js. Developed for a school project.
+Decentralised transactional system with blockchains on node.js. Developed for a school project in early 2018.
 
 ![alt-text](https://imgur.com/1UVJPML.jpg "now with portals")
 
