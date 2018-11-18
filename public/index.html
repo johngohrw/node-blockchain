@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>blockchain</title>
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root">
+        <h1 class="brand__title">muh blockchain</h1>
+
+        <div class="blockchain-view">
+          <div class="blockchain-container--inner"></div>
+          <p class="caption">(updates every 10 seconds)</p>
+        </div>
+
+        <div id="status-bar">welcome! nothing is happening so far..</div>
+
+        <div class="form-container">
+          <h3 class="transaction__title-text">make a transaction</h3>
+          <div class="transaction__text-block">from:</div>
+          <input type="text" id="input--from" value="">
+          <div class="transaction__text-block">to:</div>
+          <input type="text" id="input--to" value="">
+          <div class="transaction__text-block">amount:</div>
+          <input type="text" id="input--amount" value="">
+          <div class="transaction__text-block">description:</div>
+          <input type="text" id="input--desc" value="">
+          <br>
+          <input type="button" id="submit-transaction" value="Submit">
+        </div>
+    </div>
+    <script src="socket.io.js"></script>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>

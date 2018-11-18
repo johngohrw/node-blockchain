@@ -1,0 +1,110 @@
+#root {
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+}
+
+.brand__title {
+    margin: 20px 20px 0;
+}
+
+.blockchain-view {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px;
+    height: 330px;
+    min-width: 400px;
+    width: 80%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.blockchain-container--inner {
+    background-color: #d7d7d7;
+    overflow-x: scroll;
+    display: flex;
+    height: fit-content;
+    flex-grow: 1;
+    align-items: center;
+    /* border: 1px solid black; */
+    border-left: 5px solid orange;
+    border-right: 5px solid turquoise;
+    border-radius: 10px / 50%;
+}
+
+.caption {
+    text-align: center;
+    font-size: 12px;
+    margin: 5px 0 0;
+}
+
+.smallcode {
+    font-size: 9px;
+    line-height: 0.2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.blockchain__block {
+    background-color: #e0fbffd1;
+    border: 1px solid black;
+    margin: 0 10px;
+    padding: 10px 5px;
+    white-space: wrap;
+    word-wrap: break-word;
+    flex-shrink: 0;
+    max-width: 175px;
+    font-family: arial;
+    font-size: 12px;
+    height: calc(100% - 15px);
+    box-sizing: border-box;
+}
+
+.blockchain__connector {
+    flex-shrink: 0;
+    width: 15px;
+    background-color: black;
+    height: 4px;
+    margin: -10px;
+}
+
+#status-bar {
+    display: flex;
+    width: 400px;
+    padding: 0 15px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f7f7f7;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+    border: 1px solid black;
+    width: 400px;
+    display: flex;
+    flex-flow: nowrap column;
+    align-items: center;
+}
+
+.form-container input {
+    width: 200px;
+}
+
+#submit-transaction {
+    width: 100px;
+}
+
+.transaction__text-block {
+    width: 200px;
+}
+
+.transaction__title-text {
+    margin-top: 0;
+}
