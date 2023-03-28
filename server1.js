@@ -1,5 +1,66 @@
 console.log('server1 is running!');
 
+const validPeople = [
+    "Paddy O’Furniture",
+    "Olive Yew",
+    "Aida Bugg",
+    "Maureen Biologist",
+    "Teri Dactyl",
+    "Peg Legge",
+    "Allie Grater",
+    "Liz Erd",
+    "A. Mused",
+    "Constance Noring",
+    "Lois Di Nominator",
+    "Minnie Van Ryder",
+    "Lynn O’Leeum",
+    "P. Ann O’Recital",
+    "Ray O’Sun",
+    "Lee A. Sun",
+    "Ray Sin",
+    "Isabelle Ringing",
+    "Eileen Sideways",
+    "Rita Book",
+    "Paige Turner",
+    "Rhoda Report",
+    "Augusta Wind",
+    "Chris Anthemum",
+    "Anne Teak",
+    "U.R. Nice",
+    "Anita Bath",
+    "Harriet Upp",
+    "I.M. Tired",
+    "I. Missy Ewe",
+    "Ivana B. Withew",
+    "Anita Letterback",
+    "Hope Furaletter",
+    "B. Homesoon",
+    "Bea Mine",
+    "Bess Twishes",
+    "C. Yasoon",
+    "Audie Yose",
+    "Dee End",
+    "Amanda Hug",
+    "Ben Dover",
+    "Eileen Dover",
+    "Willie Makit",
+    "Willie Findit",
+    "Skye Blue",
+    "Staum Clowd",
+    "Addie Minstra",
+    "Anne Ortha",
+    "Dave Allippa",
+    "Dee Zynah",
+    "Hugh Mannerizorsa",
+    "Loco Lyzayta",
+    "Manny Jah",
+    "Mark Ateer",
+    "Reeve Ewer",
+    "Tex Ryta",
+    "Theresa Green",
+    "Barry Kade",
+]
+
 // module imports
 const rng = require("./rng");
 const socketFunctions = require("./socket");
@@ -69,15 +130,9 @@ socketFunctions.discover(io_client, io_port, io_client_server, nodeInfo, node_re
         myBlockChain.createGenesisBlock();
 
         // adds 3 more blocks haha
-        myBlockChain.addBlock(new Block(1, new Date().getTime(), 'Initial Balance', '-1', 'Steve Jobs', 10000));
-        myBlockChain.addBlock(new Block(2, new Date().getTime(), 'Initial Balance', '-1', 'George Harrison', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Christopher Reeve', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Robin Williams', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Beyonce', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Kanye West', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Lionel Messi', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Gordon Ramsay', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'Initial Balance', '-1', 'Rihanna', 10000));
+        validPeople.forEach((name) => {
+            myBlockChain.addBlock(new Block(1, new Date().getTime(), 'Initial Balance', '-1', name, 10000));
+        })
     },
     // Blockchain updating callback
     (newBlockchain) => {

@@ -157,9 +157,66 @@ const updateBlockchain = () => {
 
 }
 
-
-const validPeople = ["Rihanna", "Steve Jobs", "George Harrison", "Christopher Reeve",
-    "Robin Williams", "Beyonce", "Kanye West", "Lionel Messi", "Gordon Ramsay"]
+const validPeople = [
+    "Paddy O’Furniture",
+    "Olive Yew",
+    "Aida Bugg",
+    "Maureen Biologist",
+    "Teri Dactyl",
+    "Peg Legge",
+    "Allie Grater",
+    "Liz Erd",
+    "A. Mused",
+    "Constance Noring",
+    "Lois Di Nominator",
+    "Minnie Van Ryder",
+    "Lynn O’Leeum",
+    "P. Ann O’Recital",
+    "Ray O’Sun",
+    "Lee A. Sun",
+    "Ray Sin",
+    "Isabelle Ringing",
+    "Eileen Sideways",
+    "Rita Book",
+    "Paige Turner",
+    "Rhoda Report",
+    "Augusta Wind",
+    "Chris Anthemum",
+    "Anne Teak",
+    "U.R. Nice",
+    "Anita Bath",
+    "Harriet Upp",
+    "I.M. Tired",
+    "I. Missy Ewe",
+    "Ivana B. Withew",
+    "Anita Letterback",
+    "Hope Furaletter",
+    "B. Homesoon",
+    "Bea Mine",
+    "Bess Twishes",
+    "C. Yasoon",
+    "Audie Yose",
+    "Dee End",
+    "Amanda Hug",
+    "Ben Dover",
+    "Eileen Dover",
+    "Willie Makit",
+    "Willie Findit",
+    "Skye Blue",
+    "Staum Clowd",
+    "Addie Minstra",
+    "Anne Ortha",
+    "Dave Allippa",
+    "Dee Zynah",
+    "Hugh Mannerizorsa",
+    "Loco Lyzayta",
+    "Manny Jah",
+    "Mark Ateer",
+    "Reeve Ewer",
+    "Tex Ryta",
+    "Theresa Green",
+    "Barry Kade",
+]
 
 validPeople.forEach(name => {
     const optionEl = document.createElement("option")
@@ -218,7 +275,7 @@ setInterval(() => {
     }
     console.log("emitting transaction:", transaction_)
     socket.emit('transaction', JSON.stringify(transaction_));
-}, 9500)
+}, 5000)
 
 
 document.getElementById("toggleAccordion").addEventListener("click", () => {
