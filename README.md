@@ -2,7 +2,7 @@
 
 Decentralised transactional system with blockchains on node.js. Developed for a school project in early 2018.
 
-![image](https://user-images.githubusercontent.com/12826717/228315269-4b95f028-1700-4466-ad08-cffeafc623b7.png)
+![image](https://user-images.githubusercontent.com/12826717/228317836-7cd380ca-cdf9-4931-a45a-b12f4ded5447.png)
 
 ## Run instructions
 `cd node-blockchain` - change directory to project folder
