@@ -1,110 +1,236 @@
-#root {
-    display: flex;
-    flex-flow: nowrap column;
-    align-items: center;
+:root {
+    --foreground: #e4e4e4;
+    --foreground-hint: #BEBEBE;
+    --background: #232323;
+
+    --foreground-card: #131313;
+    --foreground-card-hint: #8d8d8d;
+    --background-card: #e7e6e6;
 }
 
-.brand__title {
-    margin: 20px 20px 0;
+html,
+body {
+    height: 100%;
+    font-family: 'Arimo', sans-serif;
+    margin: 0;
+
+    color: var(--foreground);
+    background: var(--background);
 }
 
-.blockchain-view {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    padding: 15px;
-    margin: 10px;
-    height: 330px;
-    min-width: 400px;
-    width: 80%;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-}
-
-.blockchain-container--inner {
-    background-color: #d7d7d7;
-    overflow-x: scroll;
-    display: flex;
-    height: fit-content;
-    flex-grow: 1;
-    align-items: center;
-    /* border: 1px solid black; */
-    border-left: 5px solid orange;
-    border-right: 5px solid turquoise;
-    border-radius: 10px / 50%;
-}
-
-.caption {
-    text-align: center;
-    font-size: 12px;
-    margin: 5px 0 0;
-}
-
-.smallcode {
-    font-size: 9px;
-    line-height: 0.2;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-.blockchain__block {
-    background-color: #e0fbffd1;
-    border: 1px solid black;
-    margin: 0 10px;
-    padding: 10px 5px;
-    white-space: wrap;
-    word-wrap: break-word;
-    flex-shrink: 0;
-    max-width: 175px;
-    font-family: arial;
-    font-size: 12px;
-    height: calc(100% - 15px);
+* {
     box-sizing: border-box;
 }
 
+#root {
+    display: flex;
+    flex-flow: nowrap column;
+    padding: 0 1rem;
+}
+
+.brand__title {
+    text-align: center;
+    margin: 1rem 0 0 0;
+    font-size: 4rem;
+    font-family: 'Cormorant Infant', serif;
+}
+
+.content {
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+    align-items: center;
+}
+
+.top-panel {
+    position: sticky;
+    top: 0;
+    background: var(--background);
+}
+
+.scrollable-panel {
+    padding-top: 1rem;
+}
+
+.blockchain-view {}
+
+.blockchain-container--inner {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+    align-items: center;
+}
+
+p.caption {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 12px;
+    margin: 1rem 0 0 0;
+}
+
+.smallcode {}
+
+.blockchain__block {
+    display: flex;
+    flex-flow: column nowrap;
+
+    width: 320px;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 3px 8px 3px rgba(255, 255, 255, 0.123);
+    background: var(--background-card);
+    color: var(--foreground-card);
+}
+
+.blockchain__block-top {
+    display: flex;
+    flex-flow: row nowrap;
+
+    justify-content: space-between;
+}
+
+.blockchain__block-topleft {
+    margin-top: 0.3rem;
+}
+
+.blockchain__block-to {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 0.5rem;
+}
+
+.blockchain__block-from {
+    margin: -0.5rem 0 0;
+    font-size: 14px;
+    color: var(--foreground-card-hint);
+}
+
+.blockchain__block-arrow {}
+
+.blockchain__block-from-inner {}
+
+.blockchain__block-topright {}
+
+.blockchain__block-amount {
+    font-size: 24px
+}
+
+.blockchain__block-currency {
+    font-size: 14px
+}
+
+.blockchain__block-mid {
+    margin: 1rem 0 0.5rem;
+    font-size: 14px;
+}
+
+.blockchain__block-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+.blockchain__block-timestamp {
+    color: var(--foreground-card-hint);
+    font-size: 12px
+}
+
+.blockchain__block-more {
+    color: var(--foreground-card-hint);
+    font-size: 12px
+}
+
 .blockchain__connector {
-    flex-shrink: 0;
-    width: 15px;
-    background-color: black;
-    height: 4px;
-    margin: -10px;
+    width: 2px;
+    height: 10px;
+    background: rgb(148, 148, 148);
+}
+
+.status-bar__container {
+    border: 1px solid rgb(97, 97, 97);
+    background: #080808;
+    border-radius: 24px;
+    position: relative;
+    padding: 0.2rem;
+    margin: 1rem 0;
+
+    overflow: hidden;
+
 }
 
 #status-bar {
-    display: flex;
-    width: 400px;
-    padding: 0 15px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 10px;
-    background-color: #f7f7f7;
-    align-items: center;
-    justify-content: center;
+    animation: 10s linear infinite marquee;
+    white-space: nowrap;
+    font-family: 'Inconsolata', monospace;
 }
+
+.togglebutton {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    transition-duration: 200ms;
+
+
+    transform: rotate(90deg);
+}
+
+.closed .togglebutton {
+    transform: rotate(0deg);
+}
+
+.form-container__container {}
 
 .form-container {
-    background-color: #f0f0f0;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
-    border: 1px solid black;
-    width: 400px;
+    padding: 1rem;
+
     display: flex;
-    flex-flow: nowrap column;
+    flex-flow: column nowrap;
     align-items: center;
+    overflow: hidden;
+
+    position: relative;
+
+    box-shadow: 0px .5rem 1rem 5px var(--background);
 }
 
-.form-container input {
-    width: 200px;
+.form-container.closed {
+    height: 3rem;
 }
 
-#submit-transaction {
-    width: 100px;
-}
+.form-container input {}
+
+#submit-transaction {}
 
 .transaction__text-block {
-    width: 200px;
+    margin: 0 0 0.2rem;
 }
 
 .transaction__title-text {
-    margin-top: 0;
+    margin: 0 0 1rem;
+}
+
+.form--input {
+    width: 200px;
+    height: 20px;
+}
+
+.form-field {
+    margin-bottom: 1rem;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(100%)
+    }
+
+    100% {
+        transform: translateX(-100%)
+    }
 }

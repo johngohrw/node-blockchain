@@ -1,40 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>blockchain</title>
-    <link rel="stylesheet" href="index.css">
-  </head>
-  <body>
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <div id="root">
-        <h1 class="brand__title">muh blockchain</h1>
 
+<head>
+  <meta charset="utf-8">
+  <title>blockchain</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Arimo&family=Cormorant+Infant:ital,wght@1,300&family=Inconsolata&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <noscript>
+    You need to enable JavaScript to run this app.
+  </noscript>
+  <div id="root">
+    <div class="content">
+      <div class="top-panel">
+        <h1 class="brand__title">node-blockchain</h1>
+        <div class="status-bar__container">
+          <div id="status-bar">welcome! nothing is happening so far..</div>
+        </div>
+
+        <div class="form-container__container">
+          <div class="form-container closed" id="form-container">
+            <h3 class="transaction__title-text">New transaction</h3>
+            <button class="togglebutton" id="toggleAccordion">></button>
+            <div class="form-field">
+              <div class="transaction__text-block">From:</div>
+              <select class="form--input" name="from" id="input--from"></select>
+            </div>
+            <div class="form-field">
+              <div class="transaction__text-block">To:</div>
+              <select class="form--input" name="to" id="input--to"></select>
+            </div>
+            <div class="form-field">
+              <div class="transaction__text-block">Amount:</div>
+              <input class="form--input" type="text" id="input--amount" value="">
+            </div>
+            <div class="form-field">
+              <div class="transaction__text-block">Description:</div>
+              <input class="form--input" type="text" id="input--desc" value="">
+            </div>
+            <input type="button" id="submit-transaction" value="Submit">
+          </div>
+        </div>
+      </div>
+      <div class="scrollable-panel">
         <div class="blockchain-view">
           <div class="blockchain-container--inner"></div>
-          <p class="caption">(updates every 10 seconds)</p>
         </div>
+        <p class="caption">(updates every 10 seconds)</p>
 
-        <div id="status-bar">welcome! nothing is happening so far..</div>
 
-        <div class="form-container">
-          <h3 class="transaction__title-text">make a transaction</h3>
-          <div class="transaction__text-block">from:</div>
-          <input type="text" id="input--from" value="">
-          <div class="transaction__text-block">to:</div>
-          <input type="text" id="input--to" value="">
-          <div class="transaction__text-block">amount:</div>
-          <input type="text" id="input--amount" value="">
-          <div class="transaction__text-block">description:</div>
-          <input type="text" id="input--desc" value="">
-          <br>
-          <input type="button" id="submit-transaction" value="Submit">
-        </div>
+      </div>
     </div>
-    <script src="socket.io.js"></script>
-    <script src="jquery-3.3.1.min.js"></script>
-    <script src="index.js"></script>
-  </body>
+
+
+  </div>
+  <script src="socket.io.js"></script>
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="javascript-time-ago.js"></script>
+  <script src="index.js"></script>
+</body>
+
 </html>

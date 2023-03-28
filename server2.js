@@ -68,10 +68,6 @@ socketFunctions.discover(io_client, io_port, io_client_server, nodeInfo, node_re
         console.log(`${nodeInfo.name} >>> Generating genesis block..`)
         myBlockChain.createGenesisBlock();
 
-        // adds 3 more blocks haha
-        myBlockChain.addBlock(new Block(1, new Date().getTime(), 'desc1', '-1', 'C1', 10000));
-        myBlockChain.addBlock(new Block(2, new Date().getTime(), 'desc2', '-1', 'C2', 10000));
-        myBlockChain.addBlock(new Block(3, new Date().getTime(), 'desc3', '-1', 'C3', 10000));
     },
     // Blockchain updating callback
     (newBlockchain) => {
