@@ -83,6 +83,7 @@ document.getElementById("submit-transaction").onclick = () => {
     let transaction = { from, to, amount, desc }
     socket.emit('transaction', JSON.stringify(transaction));
     console.log(`transaction emitted: ${transaction}`);
+    document.getElementById("form-container").classList.add("closed")
 
     // resetting form values, update status bar
     document.getElementById("input--from").value = "";

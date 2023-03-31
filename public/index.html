@@ -28,17 +28,21 @@
           <div class="form-container closed" id="form-container">
             <h3 class="transaction__title-text">New transaction</h3>
             <button class="togglebutton" id="toggleAccordion">></button>
-            <div class="form-field">
-              <div class="transaction__text-block">From:</div>
-              <select class="form--input" name="from" id="input--from"></select>
+            <div style="display: flex; flex-flow: row nowrap;">
+              <div class="form-field">
+                <div class="transaction__text-block">From</div>
+                <select class="form--input input--text" name="from" id="input--from"></select>
+              </div>
+              <img class="blockchain__block-arrow" style="padding: 0 1rem;" src="arrow.svg" />
+              <div class="form-field">
+                <div class="transaction__text-block">To</div>
+                <select class="form--input input--text" name="to" id="input--to"></select>
+              </div>
             </div>
-            <div class="form-field">
-              <div class="transaction__text-block">To:</div>
-              <select class="form--input" name="to" id="input--to"></select>
-            </div>
+
             <div class="form-field">
               <div class="transaction__text-block">Amount:</div>
-              <input class="form--input" type="text" id="input--amount" value="">
+              <input class="form--input" type="number" id="input--amount" value="">
             </div>
             <div class="form-field">
               <div class="transaction__text-block">Description:</div>

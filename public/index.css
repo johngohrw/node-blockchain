@@ -165,13 +165,13 @@ p.caption {
 
 .togglebutton {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.9rem;
+    right: 0.8rem;
     background: none;
     outline: none;
     border: none;
-    color: white;
-    font-size: 1rem;
+    color: rgb(51, 51, 51);
+    font-size: 1.25rem;
     font-weight: 600;
     cursor: pointer;
 
@@ -188,8 +188,10 @@ p.caption {
 .form-container__container {}
 
 .form-container {
-    padding: 1rem;
+    padding: 1rem 2rem 2rem;
+    border-radius: 4px;
 
+    background: #f3f3f3;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -197,11 +199,14 @@ p.caption {
 
     position: relative;
 
-    box-shadow: 0px .2rem .4rem .2rem var(--background);
+    transition-duration: 100ms;
+    height: 330px;
+
+    box-shadow: 0px .2rem .4rem .2rem rgba(0, 0, 0, 0.15);
 }
 
 .form-container.closed {
-    height: 3rem;
+    height: 52px;
 }
 
 .form-container input {}
@@ -210,19 +215,50 @@ p.caption {
 
 .transaction__text-block {
     margin: 0 0 0.2rem;
+    font-size: 12px;
+    color: rgb(51, 51, 51);
 }
 
 .transaction__title-text {
     margin: 0 0 1rem;
+    color: rgb(49, 49, 49);
 }
 
 .form--input {
-    width: 200px;
-    height: 20px;
+    height: 36px;
+    padding: 0.5rem;
+    border: none;
+    background: rgb(255, 255, 255);
+
+    border-radius: 4px;
+    border-bottom: 1px solid rgb(134, 134, 134);
+    outline: none;
+}
+
+select.form--input {
+    width: 150px
+}
+
+.input--text {
+    width: 100%;
 }
 
 .form-field {
     margin-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#submit-transaction {
+    height: 34px;
+    width: 100%;
+    background: #0479E5;
+    border: none;
+    border-radius: 24px;
+    outline: none;
+    color: white;
+
 }
 
 @keyframes marquee {
